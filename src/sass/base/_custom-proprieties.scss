@@ -1,0 +1,73 @@
+@use "../abstracts/colors";
+@use "../abstracts/typography";
+
+
+:root {
+    @each $color, $value in colors.$colors {
+        --background-color-#{$color}: #{$value};
+        --color-#{$color}: #{$value};
+    }
+
+    @each $font, $value in typography.$font-weights {
+        --font-weight-#{$font}: #{$value};
+    }
+
+    --font-base: 'Epilogue', sans-serif;
+    --font-icon: 'Font Awesome 6 Free';
+    
+    // font-size by Utopia
+    /* Step -2: 12.50px → 15.28px */
+    --step--2: clamp(0.78rem, calc(0.71rem + 0.32vw), 0.96rem);
+
+    /* Step -1: 15.00px → 18.33px */
+    --step--1: clamp(0.94rem, calc(0.85rem + 0.38vw), 1.15rem);
+
+    /* Step 0: 18.00px → 22.00px */
+    --step-0: clamp(1.13rem, calc(1.02rem + 0.46vw), 1.38rem);
+
+    /* Step 1: 21.60px → 26.40px */
+    --step-1: clamp(1.35rem, calc(1.22rem + 0.55vw), 1.65rem);
+
+    /* Step 2: 25.92px → 31.68px */
+    --step-2: clamp(1.62rem, calc(1.46rem + 0.67vw), 1.98rem);
+
+    /* Step 3: 31.10px → 38.02px */
+    --step-3: clamp(1.94rem, calc(1.76rem + 0.80vw), 2.38rem);
+
+    /* Step 4: 37.32px → 45.62px */
+    --step-4: clamp(2.33rem, calc(2.11rem + 0.96vw), 2.85rem);
+
+    /* Step 5: 44.79px → 54.74px */
+    --step-5: clamp(2.80rem, calc(2.53rem + 1.15vw), 3.42rem);
+
+    /* Step 6: 53.75px → 65.69px */
+    --step-6: clamp(3.36rem, calc(3.04rem + 1.38vw), 4.11rem);
+
+    /* Step 7: 64.50px → 78.83px */
+    --step-7: clamp(4.03rem, calc(3.64rem + 1.66vw), 4.93rem);
+
+    /* Step 8: 77.40px → 94.60px */
+    // --step-8: clamp(4.84rem, calc(4.37rem + 1.99vw), 5.91rem);
+    --step-8: clamp(2.38rem, calc(1.14rem + 5.26vw), 5.88rem);
+
+    /* Step 9: 92.88px → 113.52px */
+    --step-9: clamp(5.81rem, calc(5.25rem + 2.39vw), 7.10rem);
+    
+    // spaces by Utopia
+    /* Space 3xs-xs: 6px → 36px */
+    --space-3xs-xs: clamp(0.38rem, calc(-0.29rem + 2.82vw), 2.25rem);
+    /* Space 3xs-2xs: 6px → 24px */
+    --space-3xs-2xs: clamp(0.38rem, calc(-0.02rem + 1.69vw), 1.50rem);
+    /* Space xs-s: 18px → 48px */
+  --space-xs-s: clamp(1.13rem, calc(0.46rem + 2.82vw), 3.00rem);
+    /* Space 3xs-m: 6px → 72px */
+    --space-3xs-m: clamp(0.38rem, calc(-1.08rem + 6.20vw), 4.50rem);
+    /* Space 2xs-s: 12px → 48px */
+    --space-2xs-s: clamp(0.75rem, calc(-0.04rem + 3.38vw), 3.00rem);
+    /* Space 3xs-xl: 6px → 144px */
+    --space-3xs-xl: clamp(0.38rem, calc(-2.66rem + 12.96vw), 9.00rem);
+    /* Space s: 24px → 48px */
+    --space-s: clamp(1.50rem, calc(0.97rem + 2.25vw), 3.00rem);
+    /* Space l-l: 48px → 96px */
+    --space-l: clamp(3.00rem, calc(1.94rem + 4.51vw), 6.00rem);
+}

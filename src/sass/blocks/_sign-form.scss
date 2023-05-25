@@ -1,0 +1,9 @@
+@use '../abstracts/breakpoints';
+
+
+.sign-form {
+    display: flex;
+    @media (max-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+        display: block;
+    }
+}

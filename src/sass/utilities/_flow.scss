@@ -1,0 +1,7 @@
+.flow > * + * {
+    margin-block-start: var(--flow-space);
+}
+
+.flow-horizontal > * + * {
+    margin-inline-start: var(--flow-space-horizontal);
+}

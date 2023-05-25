@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- fonts by google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Intro section with navbar__dropdown navigation
+    </title>
+
+    <link href="./sass/main.scss" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <header>
+      <section
+        class="top-header | flex align-center space-between font-size--1"
+      >
+        <figure>
+          <a href="">
+            <img src="./images/logo.svg" alt="Snap logo" />
+          </a>
+        </figure>
+        <div
+          id="navbar-buttons-container"
+          class="navbar-buttons-container"
+          data-visible="false"
+        >
+          <nav class="navbar">
+            <ul class="flow flow-horizontal">
+              <li class="navbar__dropdown">
+                <a
+                  class="navbar__dropdown__header"
+                  aria-controls="navbar__dropdown__menu"
+                  aria-expanded="false"
+                >
+                  Features
+                  <img
+                    class="navbar__dropdown__arrow-indicator"
+                    src="./images/icon-arrow-down.svg"
+                    alt="arrow down"
+                /></a>
+                <ul
+                  id="navbar__dropdown__menu"
+                  class="navbar__dropdown__menu | flow"
+                >
+                  <li class="navbar__dropdown__item">
+                    <img src="./images/icon-todo.svg" alt="todo list" />
+                    Todo List
+                  </li>
+                  <li class="navbar__dropdown__item">
+                    <img
+                      src="./images/icon-calendar.svg"
+                      alt="calendar"
+                    />Calendar
+                  </li>
+                  <li class="navbar__dropdown__item">
+                    <img
+                      src="./images/icon-reminders.svg"
+                      alt="reminders"
+                    />Reminders
+                  </li>
+                  <li class="navbar__dropdown__item">
+                    <img
+                      src="./images/icon-planning.svg"
+                      alt="planning"
+                    />Planning
+                  </li>
+                </ul>
+              </li>
+              <li class="navbar__dropdown">
+                <a
+                  class="navbar__dropdown__header"
+                  aria-controls="navbar__dropdown_menu"
+                  aria-expanded="false"
+                >
+                  Company
+                  <img
+                    class="navbar__dropdown__arrow-indicator"
+                    src="./images/icon-arrow-down.svg"
+                    alt="arrow up"
+                  />
+                </a>
+                <ul
+                  id="navbar__dropdown__menu"
+                  class="navbar__dropdown__menu | flow"
+                >
+                  <li class="navbar__dropdown__item">History</li>
+                  <li class="navbar__dropdown__item">Our Team</li>
+                  <li class="navbar__dropdown__item">Blog</li>
+                </ul>
+              </li>
+              <li class="navbar__item"><a>Careers</a></li>
+              <li class="navbar__item"><a>About</a></li>
+            </ul>
+          </nav>
+          <div class="sign-form">
+            <button class="button button--login">Login</button>
+            <button class="button button--register">Register</button>
+          </div>
+        </div>
+        <button
+          id="navbar-button"
+          class="button button--dropdown-menu"
+          aria-controls="nav-buttons-container"
+          aria-expanded="false"
+          aria-pressed="false"
+        ></button>
+      </section>
+      <section class="hero | with-sidebar">
+        <section class="with-sidebar__not-sidebar | hero__informations | flow">
+          <div class="hero__description | flow">
+            <h1>Make remote work</h1>
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="button button--more-informations">Learn more</button>
+          </div>
+          <figure class="hero__icons">
+            <img src="./images/client-databiz.svg" alt="databiz" />
+            <img src="./images/client-audiophile.svg" alt="audiophile" />
+            <img src="./images/client-meet.svg" alt="meet" />
+            <img src="./images/client-maker.svg" alt="maker" />
+          </figure>
+        </section>
+        <section class="with-sidebar__sidebar | hero__image"></section>
+      </section>
+    </header>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

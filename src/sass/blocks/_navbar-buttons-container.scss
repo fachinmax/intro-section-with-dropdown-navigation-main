@@ -1,0 +1,32 @@
+@use '../abstracts/breakpoints';
+
+
+.navbar-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    @media (max-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        left: 35%;
+        bottom: 0;
+        padding-inline: 2rem;
+        padding-block-start: 4rem;
+        z-index: 10;
+        background-color: var(--color-almost-white);
+        transition: transform .25s ease-in-out;
+
+
+        &[data-visible=false] {
+            transform: translateX(100%);
+        }
+
+        &[data-visible=true] {
+            transform: translateX(0);
+        }
+    }
+}

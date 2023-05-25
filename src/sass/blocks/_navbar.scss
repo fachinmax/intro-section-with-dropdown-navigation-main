@@ -1,0 +1,77 @@
+@use '../abstracts/breakpoints';
+
+
+
+.navbar {
+    --flow-space: 1.5rem;
+    margin-inline-start: var(--space-3xs-m);
+
+    @media (min-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+        --flow-space-horizontal: var(--space-3xs-m);
+        --flow-space: 0;
+    }
+    
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+            display: block;
+        }
+    }
+    
+    &__dropdown {
+        width: max-content;
+        position: relative;
+
+        @media (min-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+            padding-block: 1.5rem;
+        }
+
+        &__arrow-indicator {
+            margin-inline-start: .6rem;
+            scale: 1.5;
+            transition: scale .25s ease-in-out rotate .25s ease-in-out;
+        }
+        
+        &:hover &__arrow-indicator {
+            scale: 1.5;
+            rotate: 180deg;
+        }
+
+        &:hover &__menu {
+            display: block;
+            pointer-events: all;
+            margin-block-start: 1.5rem;
+            @media (min-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+                margin-block-start: 0;
+            }
+        }
+        
+        &__menu {
+            --flow-space: 1.5rem;
+
+            display: none;
+            margin-inline-start: 1.5rem;
+            width: max-content;
+            pointer-events: none;
+
+            @media (min-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+                position: absolute;
+                top: 60;
+                height: auto;
+                border-radius: 9px;
+                padding: 1.2em;
+                box-shadow: 0 2px 9px var(--color-box-shadow);
+                background-color: var(--color-almost-white);
+            }
+        }
+
+        &__item {
+            img {
+                margin-inline-end: 1rem;
+            }
+        }
+    }
+}

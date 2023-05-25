@@ -1,0 +1,15 @@
+.with-sidebar {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: var(--gap);
+
+    &__sidebar {
+        flex-grow: 1;
+        flex-basis: var(--sidebar-width, 28rem);
+    }
+    
+    &__not-sidebar {
+        flex-grow: 999;
+        flex-basis: 0;
+    }
+}

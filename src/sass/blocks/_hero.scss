@@ -1,0 +1,35 @@
+@use '../abstracts/breakpoints';
+
+
+.hero {
+    --gap: var(--space-l);
+    --sidebar-width: 20rem;
+    
+    margin: var(--space-3xs-m) var(--space-3xs-xl);
+
+    &__informations {
+        --flow-space: var(--space-l);
+    }
+
+    &__description {
+        --flow-space: var(--space-s);
+
+        @media (max-width: map-get(breakpoints.$breakpoints, 'tablet')) {
+            text-align: center;
+        }
+    }
+
+
+    &__image {
+        background-image: url('../images/image-hero-desktop.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 30rem;
+        margin: 0;
+        
+        @media (max-width: map-get(breakpoints.$breakpoints, 'tablet')) {
+            background-image: url('../images/image-hero-mobile.png');
+        }
+    }
+}

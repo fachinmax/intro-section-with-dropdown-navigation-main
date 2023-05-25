@@ -1,0 +1,25 @@
+{
+  "homepage": "https://fachinmax.github.io/intro-section-with-dropdown-navigation-main",
+  "name": "intro-section-with-dropdown-navigation-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "targets": {
+    "main": false
+  },
+  "source": "src/index.html",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "parcel",
+    "build": "parcel build --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "gh-pages": "^5.0.0",
+    "parcel": "^2.8.3"
+  }
+}

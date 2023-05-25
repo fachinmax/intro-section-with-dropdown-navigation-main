@@ -1,0 +1,55 @@
+@use '../abstracts/breakpoints';
+
+
+.button {
+    &--login {
+        width: 100%;
+        border-color: transparent;
+        font-size: var(--step--1);
+
+        &:hover {
+            color: var(--color-almost-black);
+        }
+    }
+
+    &--register {
+        width: 100%;
+        font-size: var(--step--1);
+
+        &:hover {
+            border-color: var(--color-almost-black);
+            color: var(--color-almost-black);
+        }
+    }
+
+    &--more-informations {
+        border-color: var(--color-almost-black);
+        background-color: var(--color-almost-black);
+        color: var(--color-almost-white);
+
+        &:hover {
+            color: var(--color-almost-black);
+            background-color: var(--color-almost-white);
+            border-color: var(--color-almost-black);
+        }
+    }
+
+    &--dropdown-menu {
+        border: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 100;
+
+        @media (min-width: map-get(breakpoints.$breakpoints, 'hidden-navbar')) {
+            display: none;
+        }
+
+        &[aria-pressed=false] {
+            background-image: url('../images/icon-menu.svg');
+        }
+
+        &[aria-pressed=true] {
+            background-image: url('../images/icon-close-menu.svg');
+        }
+    }
+}
