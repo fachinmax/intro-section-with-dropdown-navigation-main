@@ -19,12 +19,6 @@ ul {
     list-style: none;
 }
 
-li {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 a {
   color: var(--color-medium-gray);
 
